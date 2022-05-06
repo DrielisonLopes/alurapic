@@ -1,12 +1,22 @@
-import
-
 <div>
   <h1 class="bg-info text-white">
       Welcome to {{ title }}!
   </h1>
-  <!-- <img class="img-thumbnail" [alt]="title" [src]="url"> -->
-  <ap-photo></ap-photo>
-  <ap-photo></ap-photo>
+  <!-- 
+    A imagem que era declarada dessa forma:
+    <img class="img-thumbnail" [alt]="title" [src]="url">
+    Agora passa a ser declarada via componente: 
+    <ap-photo></ap-photo>
+  --> 
+  <!-- inbound properties -->
+  <ap-photo
+    url="https://yt3.ggpht.com/xqhIoXspeX7eqouJvNHl1xqpv9213Pl26ENZbuouXxO2RlDadjsveNXfgnj8GTUk7thFYUkVRg=s900-c-k-c0x00ffffff-no-rj"
+    description="logo"
+    ></ap-photo>
+  <ap-photo
+    url="https://www.alura.com.br/assets/img/alura-share.1647533642.png"
+    description="logo frase"
+    ></ap-photo>
 </div>
 
 <h2 class="bg-danger text-white">AluraPic é desenvolvido com Angular</h2>
