@@ -9,9 +9,18 @@ export class AppComponent {
 
   title = 'AluraPic';
 
-  photos = [];
+  photos: Object[] = [];
   constructor(http: HttpClient) {
-    console.log(http)
+    
+    // const observable = http.get('http://localhost:3000/flavio/photos');
+    // observable.subscribe();
+    // refatorando para:
+    http
+      .get<Object[]>('http://localhost:3000/flavio/photos')
+      .subscribe(
+        photos => this.photos = photos,
+        err => console.log(err.message)
+        );
   }
 
 }
